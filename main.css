@@ -1,0 +1,317 @@
+@import url('https://fonts.googleapis.com/css2?family=Bruno+Ace&display=swap');
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body::-webkit-scrollbar {
+    width: 8px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #555;
+    border-radius: 4px;
+}
+
+body::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+    background-color: #888;
+}
+
+body::-webkit-scrollbar-track:hover {
+    background-color: #f1f1f1;
+}
+
+body {
+    background-color: black;
+    position: relative;
+}
+
+.carrito {
+    border-left: 3px solid white;
+    visibility: hidden;
+    z-index: 2;
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    width: 400px;
+    height: 100vh;
+    background-color: black;
+}
+
+nav {
+    z-index: 1;
+    width: 100%;
+    height: 80px;
+    position: fixed;
+    top: 0;
+
+}
+
+.navbar {
+    background-color: black;
+    display: flex;
+    position: relative;
+    justify-content: space-around;
+}
+
+.navbar img {
+    height: 70px;
+}
+
+.navbar label {
+    border: 3px solid white;
+    background-color: rgb(255, 255, 255);
+    cursor: pointer;
+    border-radius: 15px;
+    position: absolute;
+    right: 30px;
+    top: 10px;
+    font-size: 35px;
+    padding: 5px;
+}
+
+.navbar label:hover {
+    background-color: rgb(99, 99, 99);
+}
+
+.carritoCont {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+}
+
+.carritoCont::-webkit-scrollbar {
+    width: 0.5rem;
+}
+
+.carritoCont label {
+    border: 3px solid white;
+    color: white;
+    cursor: pointer;
+    border-radius: 50px;
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    font-size: 40px;
+}
+
+
+
+.carritoCont label:hover {
+    background-color: white;
+    color: black;
+}
+
+#btnCarrito {
+    display: none;
+}
+
+main {
+    margin: 100px auto;
+    width: 90%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+
+
+.carta {
+    margin: 40px 0px;
+    border-radius: 15px;
+    color: aliceblue;
+    font-family: 'Bruno Ace', cursive;
+    text-align: center;
+    width: 300px;
+    height: 550px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+}
+
+.carta img {
+    border: 3px solid white;
+}
+
+.carta h3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    height: 100px;
+}
+
+.carta h4 {
+    display: flex;
+    align-items: start;
+    text-align: left;
+    width: 90%;
+    height: 40px;
+}
+
+.carta .btn {
+    color: aliceblue;
+    font-size: 17px;
+    border-radius: 10px;
+    padding: 5px 10px;
+    cursor: pointer;
+    background-color: rgb(94, 127, 226);
+    position: absolute;
+    right: 20px;
+    bottom: 0;
+}
+
+.carta .btn:hover {
+    background-color: rgb(54, 72, 125);
+}
+
+.cartaCart {
+    display: flex;
+    margin: 12px;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 100px;
+    height: 200px;
+    font-family: 'Bruno Ace', cursive;
+    color: aliceblue;
+    position: relative;
+}
+
+.cartaCart p{
+    position: absolute;
+    background-color: rgb(237, 228, 101);
+    color: rgb(0, 0, 0);
+    border-radius: 10px;
+    border: 3px solid rgb(251, 251, 251);
+    font-size: 10px;
+    padding: 3px;
+    width: 25px;
+    height: 25px;
+    text-align: center;
+    top: 25px;
+    right: 0px;
+}
+
+.cartaCart img {
+    width: 100%;
+}
+
+.cartaCart h3 {
+    font-size: 10px;
+    width: 100%;
+    height: 15px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.cartaCart h4 {
+    font-size: 10px;
+}
+
+
+
+.carritoCompra {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: start;
+    margin-top: 65px;
+    padding-bottom: 100px;
+    width: 100%;
+    height: auto;
+}
+
+.cartButton{
+    font-size: 20px;
+    position: absolute;
+    border-radius: 5px;
+}
+
+.addMore{
+    bottom: 25px;
+    right: 0;
+    background-color: greenyellow;
+}
+
+.removeOne{
+    background-color: red;
+    bottom: 25px;
+    left: 0;
+}
+
+.totalCompra{
+
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    background-color: #e6e6e6;
+    border-top: 10px solid #c4c4c4;
+}
+
+.totalCont{
+    font-family: 'Bruno Ace', cursive;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.compraTotal{
+    text-align: left;
+    font-size: 25px;   
+    margin: 5px; 
+}
+
+.pagarAhora{
+    border-radius: 15px;
+    cursor: pointer;
+    width: 385px;
+    padding: 10px;
+    font-size: 20px;    
+    background-color: #dccf41 ;
+    text-align: center;
+    margin: 5px;
+}
+
+.pagarAhora:hover{
+    
+    background-color: #544f18 ;
+    color: rgb(255, 255, 255);
+}
+
+
+@media (max-width: 380px) {
+
+    .navbar label {
+        right: 10px;
+        top: 10px;
+    }
+
+    .carrito {
+        width: 100%;
+    }
+    .pagarAhora{
+        width: 300px;
+    }
+
+    .cartaCart {
+        margin: 10px;
+    }
+  }
